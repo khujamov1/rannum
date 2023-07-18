@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(46, 3, 86);
+}
+.container {
+    max-width: 1000px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.fizzbuzz-form {
+    padding: 100px;
+    text-align: center;
+    color: #fff;
+}
+.fizzbuzz-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 48px;
+}
+.fizzbuzz-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+.fizzbuzz-button {
+    width: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(24, 232, 232);
+}
+.fizzbuzz-button:hover {
+    opacity: 0.5;
+}
+.fizzbuzz-desc {
+    margin: 0;
+    content: "";
+}
+
+
+.rannum-form {
+    padding: 0 100px;
+    text-align: center;
+    color: #fff;
+}
+.rannum-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 48px;
+}
+.rannum-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+.rannum-button {
+    width: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(24, 232, 232);
+}
+.rannum-button:hover {
+    opacity: 0.5;
+}
+.rannum-desc {
+    margin: 0;
+    content: "";
+}
+
