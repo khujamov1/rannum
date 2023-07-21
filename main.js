@@ -30,13 +30,14 @@ function fizzbuzz(num) {
 
 // RANDOM NUMBER 
 
-var randomNum = Math.floor(Math.random() * 100)
 var elFormRan = document.querySelector(".rannum-form");
 var elInputRan = elFormRan.querySelector(".rannum-input");
 var elAttemptRan = elFormRan.querySelector(".rannum-attempt");
 var nearNumber = elFormRan.querySelector(".rannum-near");
+
+
 var attemptNum = 6;
-elAttemptRan.textContent ="Urunishlar soni: " + attemptNum
+var randomNum = Math.round(Math.random() * 100);
 console.log(randomNum);
 
 
@@ -45,26 +46,21 @@ elFormRan.addEventListener("submit", function(evt){
     evt.preventDefault();
     
     var elInputValRan = elInputRan.value;
-    closeNum(elInputValRan, randomNum, nearNumber);
     
-    attemptNum--;
-    if(attemptNum <= 0) {
-        elAttemptRan.textContent = "Game Over";
+    --attemptNum;
+    elAttemptRan.textContent =`Urunishlar soni:  ${attemptNum}`;
+    
+    if(elInputValRan == randomNum) {
+        nearNumber.textContent = "Siz go'lib bo'ldingiz!";
+        elInputRan.disabled = true;
+    }else if(attemptNum == 0) {
+        elAttemptRan.textContent ="Urunishlaringiz soni tugadi!"
+        elInputRan.disabled = true;
+    }else if(elInputValRan > randomNum) {
+        nearNumber.textContent = "Siz kiritgan sondan kichik"
+    }else if(elInputValRan < randomNum) {
+        nearNumber.textContent = "Siz kiritgan sondan katta"
     }
-    else(
-        elAttemptRan.textContent ="Urunishlar soni: " + attemptNum
-        )
-    })
-    
-    // RANDOM NUMBER 
-    
-    
-    function closeNum(son, randomSon, text) {
-        if(son > randomSon) {
-            text.textContent = "Siz tanlagan sondan kichik"
-        }else if(son < randomSon) {
-            text.textContent = "Siz tanlagan sondan katta"
-        }else {
-            text.textContent = "You win";
-        }
-    };
+})
+
+// RANDOM NUMBER 
